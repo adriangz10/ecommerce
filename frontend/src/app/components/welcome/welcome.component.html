@@ -1,0 +1,10 @@
+<div class="welcome-container">
+  <div *ngIf="userRole">
+    <h1>¡Bienvenido!</h1>
+    <p class="welcome-message">Eres un usuario con rol de: <strong>{{ userRole }}</strong></p>
+    <button (click)="logout()" class="btn btn-secondary">Cerrar Sesión</button>
+  </div>
+  <div *ngIf="!userRole">
+    <p>No se pudo determinar el rol del usuario.</p>
+  </div>
+</div>
